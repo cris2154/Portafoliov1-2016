@@ -3,18 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio v1 - 2016</title>
+    <title>Portafolio v1 - 2016</title>
+    <!-- Iconos básicos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Mi Portafolio</h1>
+    <!-- Barra de navegación superior -->
+    <header class="navbar">
+        <div class="logo-nav">
+            <img src="img/avatar.svg" alt="Avatar Logo">
+        </div>
+        <button class="btn-menu" id="btnMenu" aria-label="Menú">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="navLinks">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <main>
-        <p>Proyecto base listo.</p>
-    </main>
+    <!-- Barra flotante lateral de redes sociales -->
+    <aside class="redes-flotantes">
+        <a href="#" class="red-item fb" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="red-item yt" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+        <a href="#" class="red-item tw" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="red-item ig" title="Instagram"><i class="fa fa-instagram"></i></a>
+    </aside>
+
+    <!-- Sección Hero Principal (100vh y Color Morado) -->
+    <section class="hero" id="inicio">
+        <div class="hero-contenido">
+            <div class="avatar-principal">
+                <img src="img/avatar.svg" alt="Foto de Perfil">
+            </div>
+            <h1>CRIS</h1>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí y Especialidad -->
+    <section class="seccion-blanca" id="sobre-mi">
+        <div class="contenedor">
+            <div class="bloque-sobre-mi">
+                <h2 class="titulo-izquierda">SOBRE MI</h2>
+                <p>
+                    Soy un Profesor y Desarrollador con mucha experiencia en la Docencia en los cursos de Informática y
+                    Diseño, especializando en los Programas como Office, Adobe, Autodesk, Animaciones
+                    en 2D y 3D, Videojuegos. También Diseño y Desarrollo todo tipo de Páginas Web.
+                </p>
+                <button class="btn-amarillo" id="btnCurriculum">DESCARGAR CURRICULUM</button>
+            </div>
+
+            <div class="bloque-especialidad">
+                <h2 class="titulo-centro">ESPECIALIDAD</h2>
+                <div class="galeria-especialidad">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=500&q=80" alt="Diseño Web">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Analítica y Gestión">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80" alt="Programación">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=500&q=80" alt="Diseño Digital y 3D">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios (Fondo Oscuro con Overlay) -->
+    <section class="seccion-servicios" id="servicios">
+        <div class="overlay-servicios">
+            <div class="contenedor">
+                <h2 class="titulo-centro blanco">SERVICIOS</h2>
+                <div class="grid-servicios">
+                    <div class="item-servicio">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                    <div class="item-servicio">
+                        <i class="fa fa-desktop"></i>
+                        <h3>Ordenador</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                    <div class="item-servicio">
+                        <i class="fa fa-heart"></i>
+                        <h3>Corazon</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                    <div class="item-servicio">
+                        <i class="fa fa-eye"></i>
+                        <h3>Ojos</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                    <div class="item-servicio">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Foco</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                    <div class="item-servicio">
+                        <i class="fa fa-trophy"></i>
+                        <h3>Copa</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section class="seccion-blanca" id="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo-centro">PORTAFOLIO</h2>
+            <div class="grid-portafolio">
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Proyecto 1">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Proyecto 2">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" alt="Proyecto 3">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Proyecto 4">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Proyecto 5">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Proyecto 6">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Proyecto 7">
+                </div>
+                <div class="card-proyecto">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Proyecto 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios (Color Morado con VH) -->
+    <section class="seccion-testimonios" id="testimonios">
+        <div class="contenedor">
+            <h2 class="titulo-testimonios">Testimonios</h2>
+            <div class="grid-testimonios">
+                <!-- Testimonio 1 -->
+                <div class="card-testimonio">
+                    <div class="foto-testimonio rosa">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Jane Doe">
+                    </div>
+                    <h3>Jane Doe</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit,
+                        egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.
+                    </p>
+                    <div class="redes-testimonio">
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="card-testimonio">
+                    <div class="foto-testimonio oscuro">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Jhon Doe">
+                    </div>
+                    <h3>Jhon Doe</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit,
+                        egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.
+                    </p>
+                    <div class="redes-testimonio">
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="card-testimonio">
+                    <div class="foto-testimonio celeste">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Irene Doe">
+                    </div>
+                    <h3>Irene Doe</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit,
+                        egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.
+                    </p>
+                    <div class="redes-testimonio">
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="seccion-contacto" id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo-centro">CONTACTO</h2>
+
+            <div class="banner-contacto">
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1000&q=80" alt="Oficina Contacto">
+            </div>
+
+            <div class="caja-formulario">
+                <h3>Informes</h3>
+                <p class="subtitulo-form">Consulta para mas Informacion</p>
+
+                <form id="formContacto">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su Nombre Completo" required>
+
+                    <label for="correo">Correo Electronico *</label>
+                    <input type="email" id="correo" placeholder="Ingrese su Correo" required>
+
+                    <label for="telefono">Telefono *</label>
+                    <input type="tel" id="telefono" placeholder="Ingrese su Telefono" required>
+
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" rows="5"></textarea>
+
+                    <div class="contenedor-boton">
+                        <button type="submit" class="btn-enviar">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="footer">
+        <div class="contenedor footer-grid">
+            <div class="footer-col">
+                <p>2016 © Derechos Reservados a Cris. Creado y Desarrollado por Cris.</p>
+            </div>
+            <div class="footer-col centro">
+                <p>Cris | Desarrollador y Diseñador Web</p>
+            </div>
+            <div class="footer-col derecha">
+                <p>Pide mi Plantilla Web con un Donativo</p>
+                <button class="btn-donate" id="btnDonate">Donate</button>
+                <div class="tarjetas-pago">
+                    <i class="fa fa-cc-visa"></i>
+                    <i class="fa fa-cc-mastercard"></i>
+                    <i class="fa fa-cc-amex"></i>
+                    <i class="fa fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

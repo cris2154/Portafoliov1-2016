@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fondo celeste suave como en el mockup -->
+  <circle cx="100" cy="100" r="98" fill="#8cc6d0" stroke="#ffffff" stroke-width="4"/>
+  <!-- Traje / Hombros -->
+  <path d="M35 180 Q65 140 100 140 Q135 140 165 180 L150 192 Q100 200 50 192 Z" fill="#4a4a4a" stroke="#111" stroke-width="3"/>
+  <!-- Camisa interior -->
+  <path d="M78 145 L100 185 L122 145 Z" fill="#a8d0db" stroke="#111" stroke-width="2.5"/>
+  <!-- Solapas del saco -->
+  <path d="M72 142 L86 185 L62 185 Z" fill="#666" stroke="#111" stroke-width="2.5"/>
+  <path d="M128 142 L114 185 L138 185 Z" fill="#666" stroke="#111" stroke-width="2.5"/>
+  <!-- Cuello -->
+  <rect x="82" y="122" width="36" height="28" rx="8" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
+  <!-- Orejas -->
+  <ellipse cx="48" cy="95" rx="9" ry="15" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
+  <ellipse cx="152" cy="95" rx="9" ry="15" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
+  <!-- Rostro -->
+  <path d="M52 65 Q52 135 100 135 Q148 135 148 65 Q148 35 100 35 Q52 35 52 65 Z" fill="#f7d7be" stroke="#111" stroke-width="3.5"/>
+  <!-- Cabello -->
+  <path d="M48 80 Q44 45 72 32 Q100 22 128 32 Q156 45 152 80 Q145 55 132 48 Q115 38 85 40 Q60 45 48 80 Z" fill="#6b4423" stroke="#111" stroke-width="3"/>
+  <!-- Cejas -->
+  <path d="M66 76 Q78 72 88 78" fill="none" stroke="#3b2313" stroke-width="4" stroke-linecap="round"/>
+  <path d="M134 76 Q122 72 112 78" fill="none" stroke="#3b2313" stroke-width="4" stroke-linecap="round"/>
+  <!-- Ojos -->
+  <ellipse cx="77" cy="88" rx="9" ry="8" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
+  <circle cx="77" cy="88" r="5" fill="#4b6b5a"/>
+  <circle cx="75" cy="86" r="2" fill="#ffffff"/>
+  <ellipse cx="123" cy="88" rx="9" ry="8" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
+  <circle cx="123" cy="88" r="5" fill="#4b6b5a"/>
+  <circle cx="121" cy="86" r="2" fill="#ffffff"/>
+  <!-- Nariz -->
+  <path d="M100 88 L96 104 L103 105" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Sonrisa -->
+  <path d="M84 115 Q100 122 116 115" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+</svg>

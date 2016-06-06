@@ -1,11 +1,500 @@
+/* =====================================================
+   ESTILOS BÁSICOS - PORTAFOLIO V1 (2016)
+   Color Principal: Morado (#4a0e78 / #3b0a60) + Uso de VH
+   ===================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
+    background-color: #ffffff;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* --- Barra Superior (Navbar) --- */
+.navbar {
+    height: 8vh;
+    min-height: 55px;
+    background-color: #1a0629;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-nav img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #f1c40f;
+    background-color: #8cc6d0;
+}
+
+.btn-menu {
+    background: none;
+    border: none;
+    color: #f1c40f;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+/* --- Barra Lateral de Redes Sociales --- */
+.redes-flotantes {
+    position: fixed;
+    left: 0;
+    top: 22vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.red-item {
+    width: 38px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.red-item.fb { background-color: #3b5998; }
+.red-item.yt { background-color: #ff0000; }
+.red-item.tw { background-color: #55acee; }
+.red-item.ig { background-color: #d95e40; }
+
+.red-item:hover {
+    opacity: 0.85;
+    width: 44px;
+    transition: 0.2s;
+}
+
+/* --- Sección Hero Principal (Uso de 100vh y Morado) --- */
+.hero {
+    height: 100vh;
+    background-color: #4a0e78; /* Color Morado Principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 8vh;
+}
+
+.avatar-principal {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    overflow: hidden;
+    background-color: #8cc6d0;
+}
+
+.avatar-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* --- Títulos Generales --- */
+.titulo-izquierda {
+    font-size: 20px;
+    color: #444;
+    border-bottom: 1px solid #999;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    max-width: 340px;
+}
+
+.titulo-centro {
+    font-size: 18px;
+    color: #111;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 8px;
+    width: 240px;
+    margin: 0 auto 25px auto;
+}
+
+.titulo-centro.blanco {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* --- Sección Blanca (Sobre Mí / Especialidad / Portafolio) --- */
+.seccion-blanca {
+    min-height: 75vh;
+    padding: 6vh 0;
+    background-color: #ffffff;
+}
+
+.bloque-sobre-mi {
+    margin-bottom: 5vh;
+}
+
+.bloque-sobre-mi p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+.btn-amarillo {
+    background-color: #f1c40f;
+    color: #222;
+    border: none;
+    padding: 9px 16px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-amarillo:hover {
+    background-color: #d4ac0d;
+}
+
+/* Galería Especialidad: 3 arriba y 1 centrada abajo como en el mockup */
+.galeria-especialidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.galeria-especialidad img {
+    width: 30%;
+    min-width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* --- Sección Servicios (Con VH y Fondo Oscuro) --- */
+.seccion-servicios {
+    min-height: 85vh;
+    background-image: url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay-servicios {
+    min-height: 85vh;
+    background-color: rgba(20, 10, 35, 0.88);
+    padding: 8vh 0;
+    display: flex;
+    align-items: center;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vh 40px;
+    margin-top: 4vh;
+}
+
+.item-servicio {
+    text-align: center;
+    color: #ffffff;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.item-servicio i {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.item-servicio h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.item-servicio p {
+    font-size: 13px;
+    color: #dcdcdc;
+    line-height: 1.5;
+}
+
+/* --- Grid Portafolio (2 columnas x 4 filas) --- */
+.grid-portafolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card-proyecto {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    height: 22vh;
+    min-height: 160px;
+}
+
+.card-proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card-proyecto img:hover {
+    transform: scale(1.04);
+}
+
+/* --- Sección Testimonios (Fondo Morado con VH) --- */
+.seccion-testimonios {
+    min-height: 70vh;
+    background-color: #4a0e78; /* Morado igual que el Hero */
+    padding: 7vh 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-testimonios {
+    text-align: center;
+    color: #f1c40f;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 4vh;
+}
+
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.foto-testimonio {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 4px solid #f1c40f;
+    overflow: hidden;
+}
+
+.foto-testimonio.rosa { background-color: #f5b7b1; }
+.foto-testimonio.oscuro { background-color: #2c2c2c; }
+.foto-testimonio.celeste { background-color: #a9cce3; }
+
+.foto-testimonio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-testimonio h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.card-testimonio p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #f0e6f7;
+    margin-bottom: 12px;
+    padding: 0 8px;
+}
+
+.redes-testimonio a {
+    color: #ffffff;
+    margin: 0 6px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* --- Sección Contacto --- */
+.seccion-contacto {
+    min-height: 90vh;
+    background-color: #e6e6e6;
+    padding: 6vh 0;
+}
+
+.banner-contacto {
+    margin-bottom: 25px;
+    height: 22vh;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+.banner-contacto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caja-formulario {
+    border: 2px solid #ffffff;
+    padding: 25px 20px;
+    background-color: #e2e2e2;
+}
+
+.caja-formulario h3 {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.subtitulo-form {
+    text-align: center;
+    font-size: 11px;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+#formContacto label {
+    display: block;
+    font-size: 11px;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#formContacto input,
+#formContacto textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d4c26a;
+    background-color: #ffffff;
+    font-size: 12px;
+    outline: none;
+}
+
+.contenedor-boton {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-enviar {
+    background-color: #f1c40f;
+    color: #333;
+    border: none;
+    width: 240px;
+    padding: 9px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #d4ac0d;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 3vh 0;
+    font-size: 12px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-col.centro {
+    text-align: center;
+}
+
+.footer-col.derecha {
+    text-align: center;
+}
+
+.btn-donate {
+    background-color: #f1c40f;
+    color: #111;
+    border: none;
+    padding: 4px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.tarjetas-pago {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    color: #ccc;
+}
+
+/* --- Diseño Responsivo Básico --- */
+@media (max-width: 768px) {
+    .btn-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a0629;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+    }
+
+    .nav-links.activo {
+        display: flex;
+    }
+
+    .grid-testimonios,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
 }
