@@ -1,34 +1,159 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Fondo celeste suave como en el mockup -->
-  <circle cx="100" cy="100" r="98" fill="#8cc6d0" stroke="#ffffff" stroke-width="4"/>
-  <!-- Traje / Hombros -->
-  <path d="M35 180 Q65 140 100 140 Q135 140 165 180 L150 192 Q100 200 50 192 Z" fill="#4a4a4a" stroke="#111" stroke-width="3"/>
-  <!-- Camisa interior -->
-  <path d="M78 145 L100 185 L122 145 Z" fill="#a8d0db" stroke="#111" stroke-width="2.5"/>
-  <!-- Solapas del saco -->
-  <path d="M72 142 L86 185 L62 185 Z" fill="#666" stroke="#111" stroke-width="2.5"/>
-  <path d="M128 142 L114 185 L138 185 Z" fill="#666" stroke="#111" stroke-width="2.5"/>
-  <!-- Cuello -->
-  <rect x="82" y="122" width="36" height="28" rx="8" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
-  <!-- Orejas -->
-  <ellipse cx="48" cy="95" rx="9" ry="15" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
-  <ellipse cx="152" cy="95" rx="9" ry="15" fill="#f3cfb3" stroke="#111" stroke-width="3"/>
-  <!-- Rostro -->
-  <path d="M52 65 Q52 135 100 135 Q148 135 148 65 Q148 35 100 35 Q52 35 52 65 Z" fill="#f7d7be" stroke="#111" stroke-width="3.5"/>
-  <!-- Cabello -->
-  <path d="M48 80 Q44 45 72 32 Q100 22 128 32 Q156 45 152 80 Q145 55 132 48 Q115 38 85 40 Q60 45 48 80 Z" fill="#6b4423" stroke="#111" stroke-width="3"/>
-  <!-- Cejas -->
-  <path d="M66 76 Q78 72 88 78" fill="none" stroke="#3b2313" stroke-width="4" stroke-linecap="round"/>
-  <path d="M134 76 Q122 72 112 78" fill="none" stroke="#3b2313" stroke-width="4" stroke-linecap="round"/>
-  <!-- Ojos -->
-  <ellipse cx="77" cy="88" rx="9" ry="8" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
-  <circle cx="77" cy="88" r="5" fill="#4b6b5a"/>
-  <circle cx="75" cy="86" r="2" fill="#ffffff"/>
-  <ellipse cx="123" cy="88" rx="9" ry="8" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
-  <circle cx="123" cy="88" r="5" fill="#4b6b5a"/>
-  <circle cx="121" cy="86" r="2" fill="#ffffff"/>
-  <!-- Nariz -->
-  <path d="M100 88 L96 104 L103 105" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Sonrisa -->
-  <path d="M84 115 Q100 122 116 115" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <defs>
+    <!-- Degradado de fondo circular -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Degradado de piel -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe0c8"/>
+      <stop offset="100%" stop-color="#f5caa6"/>
+    </linearGradient>
+
+    <!-- Sombra de cuello -->
+    <linearGradient id="neckShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dfa982"/>
+      <stop offset="100%" stop-color="#edd0b7"/>
+    </linearGradient>
+
+    <!-- Degradado de cabello -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1810"/>
+      <stop offset="50%" stop-color="#1f110b"/>
+      <stop offset="100%" stop-color="#120804"/>
+    </linearGradient>
+
+    <!-- Brillo del cabello -->
+    <linearGradient id="hairSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a3825" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6d4630" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#5a3825" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Ropa / Hoodie -->
+    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Camiseta interior (Morada como el tema) -->
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+
+    <!-- Auriculares -->
+    <linearGradient id="headphoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+
+    <!-- Clip para el avatar circular -->
+    <clipPath id="avatarClip">
+      <circle cx="100" cy="100" r="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Borde y Fondo Circular -->
+  <circle cx="100" cy="100" r="98" fill="url(#bgGrad)" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- Contenido recortado al círculo -->
+  <g clip-path="url(#avatarClip)">
+    <!-- Brillo ambiental de fondo -->
+    <circle cx="100" cy="40" r="80" fill="#ffffff" opacity="0.15"/>
+
+    <!-- Hombros y Ropa (Hoodie de Desarrollador) -->
+    <path d="M20 200 C 25 155, 60 142, 100 142 C 140 142, 175 155, 180 200 Z" fill="url(#hoodieGrad)"/>
+
+    <!-- Cuello de la polera / camiseta interior morada -->
+    <path d="M78 142 Q 100 162 122 142 Z" fill="url(#shirtGrad)"/>
+    <path d="M86 142 Q 100 156 114 142 Z" fill="#4c1d95"/>
+
+    <!-- Cintas / cordones del hoodie -->
+    <path d="M82 150 Q 84 175 80 188" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M118 150 Q 116 175 120 188" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <circle cx="80" cy="189" r="2" fill="#94a3b8"/>
+    <circle cx="120" cy="189" r="2" fill="#94a3b8"/>
+
+    <!-- Cuello de piel -->
+    <path d="M82 110 L 82 140 Q 100 150 118 140 L 118 110 Z" fill="url(#skinGrad)"/>
+    <!-- Sombra bajo el mentón -->
+    <path d="M82 112 Q 100 130 118 112 Q 100 120 82 112 Z" fill="url(#neckShadow)"/>
+
+    <!-- Auriculares descansando en el cuello -->
+    <!-- Almohadilla izquierda -->
+    <rect x="54" y="118" width="18" height="30" rx="9" fill="url(#headphoneGrad)" stroke="#64748b" stroke-width="1.5" transform="rotate(12 63 133)"/>
+    <rect x="58" y="122" width="10" height="22" rx="5" fill="#475569" transform="rotate(12 63 133)"/>
+    <!-- Almohadilla derecha -->
+    <rect x="128" y="118" width="18" height="30" rx="9" fill="url(#headphoneGrad)" stroke="#64748b" stroke-width="1.5" transform="rotate(-12 137 133)"/>
+    <rect x="132" y="122" width="10" height="22" rx="5" fill="#475569" transform="rotate(-12 137 133)"/>
+    <!-- Arco de auriculares (curva tras el cuello) -->
+    <path d="M68 138 Q 100 162 132 138" stroke="#334155" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M68 138 Q 100 162 132 138" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+    <!-- Orejas -->
+    <ellipse cx="56" cy="92" rx="8" ry="12" fill="url(#skinGrad)"/>
+    <path d="M57 88 Q 54 92 57 96" stroke="#d49a70" stroke-width="1.5" fill="none"/>
+    <ellipse cx="144" cy="92" rx="8" ry="12" fill="url(#skinGrad)"/>
+    <path d="M143 88 Q 146 92 143 96" stroke="#d49a70" stroke-width="1.5" fill="none"/>
+
+    <!-- Cabeza / Rostro -->
+    <path d="M60 72 C 60 118, 76 130, 100 130 C 124 130, 140 118, 140 72 C 140 40, 122 36, 100 36 C 78 36, 60 40, 60 72 Z" fill="url(#skinGrad)"/>
+
+    <!-- Mejillas sonrosadas suaves -->
+    <ellipse cx="73" cy="98" rx="8" ry="5" fill="#f43f5e" opacity="0.18"/>
+    <ellipse cx="127" cy="98" rx="8" ry="5" fill="#f43f5e" opacity="0.18"/>
+
+    <!-- Ojos -->
+    <!-- Ojo izquierdo -->
+    <ellipse cx="80" cy="86" rx="7.5" ry="8.5" fill="#ffffff"/>
+    <ellipse cx="80.5" cy="86" rx="5" ry="6" fill="#1c1917"/>
+    <circle cx="81.5" cy="85" r="3.2" fill="#3b271d"/>
+    <circle cx="79" cy="83.5" r="1.8" fill="#ffffff"/>
+    <circle cx="82.5" cy="87.5" r="0.9" fill="#ffffff"/>
+    <!-- Párpado superior izquierdo -->
+    <path d="M72 84 Q 80 80 88 84" stroke="#1c1917" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+    <!-- Ojo derecho -->
+    <ellipse cx="120" cy="86" rx="7.5" ry="8.5" fill="#ffffff"/>
+    <ellipse cx="119.5" cy="86" rx="5" ry="6" fill="#1c1917"/>
+    <circle cx="118.5" cy="85" r="3.2" fill="#3b271d"/>
+    <circle cx="118" cy="83.5" r="1.8" fill="#ffffff"/>
+    <circle cx="121.5" cy="87.5" r="0.9" fill="#ffffff"/>
+    <!-- Párpado superior derecho -->
+    <path d="M112 84 Q 120 80 128 84" stroke="#1c1917" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+    <!-- Cejas estilizadas modernas -->
+    <path d="M70 75 Q 80 69 90 73" stroke="#26150b" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M110 73 Q 120 69 130 75" stroke="#26150b" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Nariz estilizada -->
+    <path d="M99 87 L 97 97 Q 100 99 103 97" stroke="#ca8a57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Sonrisa amigable -->
+    <path d="M87 106 Q 100 117 113 106" stroke="#881337" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <path d="M91 107 Q 100 114 109 107" fill="#ffffff" opacity="0.9"/>
+    <!-- Hoyuelo sutil -->
+    <path d="M85 105 Q 84 107 85 109" stroke="#ca8a57" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+    <path d="M115 105 Q 116 107 115 109" stroke="#ca8a57" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+    <!-- Cabello Moderno (Corte moderno con volumen y textura) -->
+    <!-- Base posterior y laterales -->
+    <path d="M57 76 C 54 50, 68 28, 100 25 C 132 28, 146 50, 143 76 C 143 72, 138 52, 132 46 C 122 36, 78 36, 68 46 C 62 52, 57 72, 57 76 Z" fill="url(#hairGrad)"/>
+
+    <!-- Flequillo / Tupé peinado hacia arriba y al lado -->
+    <path d="M56 68 C 55 42, 70 24, 98 22 C 128 20, 148 34, 146 56 C 144 48, 134 40, 124 38 C 110 35, 96 38, 88 44 C 78 51, 72 62, 70 70 Z" fill="url(#hairGrad)"/>
+    <path d="M68 54 C 76 38, 98 28, 120 32 C 138 36, 148 48, 144 62 C 140 50, 128 42, 112 40 C 96 38, 80 44, 68 54 Z" fill="url(#hairSheen)"/>
+
+    <!-- Mechones estilizados al frente -->
+    <path d="M58 64 Q 65 52 76 56 Q 66 62 60 70" fill="url(#hairGrad)"/>
+    <path d="M72 48 Q 88 34 110 38 Q 94 44 80 54" fill="url(#hairGrad)"/>
+    <path d="M102 34 Q 124 32 138 46 Q 124 44 112 42" fill="url(#hairGrad)"/>
+
+    <!-- Patillas definidas -->
+    <path d="M60 74 L 62 86 L 66 84 L 64 74 Z" fill="url(#hairGrad)"/>
+    <path d="M140 74 L 138 86 L 134 84 L 136 74 Z" fill="url(#hairGrad)"/>
+  </g>
 </svg>
