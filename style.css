@@ -100,6 +100,9 @@ body {
 .red-item.yt { background-color: #ff0000; }
 .red-item.tw { background-color: #55acee; }
 .red-item.ig { background-color: #d95e40; }
+.red-item.gh { background-color: #24292e; }
+.red-item.mail { background-color: #ea4335; }
+.red-item.wsp { background-color: #25d366; }
 
 .red-item:hover {
     opacity: 0.85;
@@ -138,6 +141,14 @@ body {
     color: #ffffff;
     font-size: 32px;
     letter-spacing: 1px;
+}
+
+.subtitulo-hero {
+    color: #f1c40f;
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 /* --- Títulos Generales --- */
@@ -487,7 +498,33 @@ body {
     text-align: center;
     font-size: 11px;
     color: #444;
+    margin-bottom: 14px;
+}
+
+.datos-contacto-directo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+    background-color: #f7f0fc;
+    border: 1px solid #dfcef2;
+    border-radius: 6px;
+    padding: 10px 14px;
     margin-bottom: 18px;
+    font-size: 12px;
+    color: #4a0e78;
+}
+
+.datos-contacto-directo span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.datos-contacto-directo a {
+    color: #4a0e78;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #formContacto label {
@@ -545,6 +582,22 @@ body {
 
 .footer-col.centro {
     text-align: center;
+}
+
+.footer-links-contacto {
+    font-size: 11px;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.footer-links-contacto a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links-contacto a:hover {
+    text-decoration: underline;
 }
 
 .footer-col.derecha {

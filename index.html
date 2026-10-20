@@ -28,21 +28,22 @@
         </nav>
     </header>
 
-    <!-- Barra flotante lateral de redes sociales -->
+    <!-- Barra flotante lateral de redes sociales y contacto -->
     <aside class="redes-flotantes">
+        <a href="https://github.com/cris2154" target="_blank" rel="noopener noreferrer" class="red-item gh" title="GitHub"><i class="fa fa-github"></i></a>
+        <a href="mailto:crishuamani023@gmail.com" class="red-item mail" title="Enviar Correo"><i class="fa fa-envelope"></i></a>
+        <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="red-item wsp" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
         <a href="#" class="red-item fb" title="Facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="red-item yt" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-        <a href="#" class="red-item tw" title="Twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="red-item ig" title="Instagram"><i class="fa fa-instagram"></i></a>
     </aside>
 
     <!-- Sección Hero Principal (100vh y Color Morado) -->
     <section class="hero" id="inicio">
         <div class="hero-contenido">
             <div class="avatar-principal">
-                <img src="img/avatar.svg" alt="Foto de Perfil">
+                <img src="img/avatar.svg" alt="Foto de Cristhian Huamani">
             </div>
-            <h1>CRIS</h1>
+            <h1>CRISTHIAN HUAMANI</h1>
+            <p class="subtitulo-hero">Desarrollador Web &amp; Docente de Informática</p>
         </div>
     </section>
 
@@ -52,7 +53,7 @@
             <div class="bloque-sobre-mi">
                 <h2 class="titulo-izquierda">SOBRE MI</h2>
                 <p>
-                    Soy un Profesor y Desarrollador con mucha experiencia en la Docencia en los cursos de Informática y
+                    Soy <strong>Cristhian Huamani</strong>, Profesor y Desarrollador con amplia experiencia en la Docencia en los cursos de Informática y
                     Diseño, especializando en los Programas como Office, Adobe, Autodesk, Animaciones
                     en 2D y 3D, Videojuegos. También Diseño y Desarrollo todo tipo de Páginas Web.
                 </p>
@@ -117,8 +118,21 @@
         <div class="contenedor">
             <h2 class="titulo-centro">PORTAFOLIO</h2>
             <div class="grid-portafolio">
-                <div class="card-proyecto">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Proyecto 1">
+                <div class="card-proyecto card-con-overlay" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="My Pets 2022">
+                    <div class="badge-proyecto"><i class="fa fa-paw"></i> My Pets 2022</div>
+                    <div class="overlay-proyecto">
+                        <h3>My Pets 2022</h3>
+                        <p>Adopción de Mascotas y Veterinaria</p>
+                        <div class="links-proyecto">
+                            <a href="https://tarea-2865611616.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-proyecto" title="Ver Web en Vivo en Netlify">
+                                <i class="fa fa-external-link"></i> Web Netlify
+                            </a>
+                            <a href="https://github.com/cris2154/BeterinariA-Base-2016" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-github" title="Ver Código en GitHub">
+                                <i class="fa fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-proyecto">
                     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Proyecto 2">
@@ -136,8 +150,8 @@
                         <h3>Clínica Dental Centro</h3>
                         <p>Diseño Web Odontológico (2016)</p>
                         <div class="links-proyecto">
-                            <a href="https://cris2154.github.io/dental-Base-2016/" target="_blank" rel="noopener noreferrer" class="btn-proyecto" title="Ver Demo en Vivo">
-                                <i class="fa fa-external-link"></i> Demo Web
+                            <a href="https://asaswwqd.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-proyecto" title="Ver Web en Vivo en Netlify">
+                                <i class="fa fa-external-link"></i> Web Netlify
                             </a>
                             <a href="https://github.com/cris2154/dental-Base-2016" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-github" title="Ver Código en GitHub">
                                 <i class="fa fa-github"></i> GitHub
@@ -227,21 +241,28 @@
             </div>
 
             <div class="caja-formulario">
-                <h3>Informes</h3>
-                <p class="subtitulo-form">Consulta para mas Informacion</p>
+                <h3>Informes y Contacto</h3>
+                <p class="subtitulo-form">Ponte en contacto o consulta más información</p>
+
+                <div class="datos-contacto-directo">
+                    <span><i class="fa fa-user"></i> <strong>Cristhian Huamani</strong></span>
+                    <span><i class="fa fa-envelope"></i> <strong>crishuamani023@gmail.com</strong></span>
+                    <span><i class="fa fa-phone"></i> <strong>987 654 321</strong></span>
+                    <span><i class="fa fa-github"></i> <a href="https://github.com/cris2154" target="_blank" rel="noopener noreferrer">cris2154</a></span>
+                </div>
 
                 <form id="formContacto">
                     <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" placeholder="Ingrese su Nombre Completo" required>
+                    <input type="text" id="nombre" value="Cristhian Huamani" placeholder="Ingrese su Nombre Completo" required>
 
                     <label for="correo">Correo Electronico *</label>
-                    <input type="email" id="correo" placeholder="Ingrese su Correo" required>
+                    <input type="email" id="correo" value="crishuamani023@gmail.com" placeholder="Ingrese su Correo" required>
 
                     <label for="telefono">Telefono *</label>
-                    <input type="tel" id="telefono" placeholder="Ingrese su Telefono" required>
+                    <input type="tel" id="telefono" value="987 654 321" placeholder="Ingrese su Telefono" required>
 
                     <label for="consulta">Consulta</label>
-                    <textarea id="consulta" rows="5"></textarea>
+                    <textarea id="consulta" rows="5" placeholder="Ingrese su consulta">Hola Cristhian, deseo consultar sobre tus servicios profesionales de desarrollo web y diseño.</textarea>
 
                     <div class="contenedor-boton">
                         <button type="submit" class="btn-enviar">Enviar</button>
@@ -255,10 +276,15 @@
     <footer class="footer">
         <div class="contenedor footer-grid">
             <div class="footer-col">
-                <p>2016 © Derechos Reservados a Cris. Creado y Desarrollado por Cris.</p>
+                <p>2016 © Derechos Reservados a Cristhian Huamani. Creado y Desarrollado por Cristhian HY.</p>
             </div>
             <div class="footer-col centro">
-                <p>Cris | Desarrollador y Diseñador Web</p>
+                <p>Cristhian Huamani | Desarrollador y Diseñador Web</p>
+                <p class="footer-links-contacto">
+                    <i class="fa fa-envelope"></i> crishuamani023@gmail.com &nbsp;|&nbsp;
+                    <i class="fa fa-phone"></i> 987 654 321 &nbsp;|&nbsp;
+                    <i class="fa fa-github"></i> <a href="https://github.com/cris2154" target="_blank" rel="noopener noreferrer">cris2154</a>
+                </p>
             </div>
             <div class="footer-col derecha">
                 <p>Pide mi Plantilla Web con un Donativo</p>
