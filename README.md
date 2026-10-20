@@ -11,6 +11,11 @@ Proyecto básico de Portafolio Personal desarrollado para el segundo examen de P
 1. Inicio (Hero `100vh`)
 2. Sobre Mí y Especialidad
 3. Servicios
-4. Portafolio de Proyectos
+4. Portafolio de Proyectos (con enlaces al proyecto **Clínica Dental Centro**)
 5. Testimonios
 6. Contacto
+
+## Proyectos destacados en el portafolio
+- **Clínica Dental Centro (2016)**:
+  - Repositorio en GitHub: [dental-Base-2016](https://github.com/cris2154/dental-Base-2016)
+  - Demo en vivo: [Ver Demo](https://cris2154.github.io/dental-Base-2016/)
