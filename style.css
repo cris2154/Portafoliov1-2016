@@ -273,79 +273,35 @@ body {
     line-height: 1.5;
 }
 
-/* --- Grid Portafolio (2 columnas x 4 filas) --- */
+/* --- Tarjetas compactas de proyectos con enlaces --- */
 .grid-portafolio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .card-proyecto {
-    position: relative;
     overflow: hidden;
     border: 1px solid #ddd;
-    height: 22vh;
-    min-height: 160px;
-    border-radius: 4px;
+    border-radius: 0;
+    background-color: #2d0a4b;
 }
 
 .card-proyecto img {
     width: 100%;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
-    transition: transform 0.35s ease;
-    cursor: pointer;
     display: block;
 }
 
-.card-proyecto:hover img {
-    transform: scale(1.05);
-}
-
-/* Badge identificador visible antes del hover */
-.badge-proyecto {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(26, 6, 41, 0.88);
-    color: #f1c40f;
-    padding: 5px 12px;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 4px;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-    border: 1px solid rgba(241, 196, 15, 0.4);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-}
-
-.card-proyecto:hover .badge-proyecto {
-    opacity: 0;
-}
-
-/* Overlay interactivo al hacer hover/focus */
 .overlay-proyecto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(45, 10, 75, 0.92);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.card-proyecto:hover .overlay-proyecto,
-.card-proyecto:focus-within .overlay-proyecto {
-    opacity: 1;
-    visibility: visible;
+    padding: 18px 12px;
 }
 
 .overlay-proyecto h3 {
@@ -375,7 +331,7 @@ body {
     background-color: #f1c40f;
     color: #1a0629;
     padding: 7px 14px;
-    border-radius: 4px;
+    border-radius: 0;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
